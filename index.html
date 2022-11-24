@@ -12,14 +12,41 @@
         <meta charset="UTF-8">
         <title>Minha Bibliografia</title>
         <link rel="stylesheet" href="style.css">
+        <script>
+
+            function darkMode(){
+                let body = document.getElementById('body');
+                let texto = document.getElementById('dark-text');
+    
+                if (texto.innerHTML == "Dark") {
+                    body.classList.remove('darkmode');
+                    body.classList.add('lightmode');
+                    texto.innerHTML = "Light";
+                }else {
+                    body.classList.add('darkmode');
+                    body.classList.remove('lightmode');
+                    texto.innerHTML = "Dark";
+                }  
+            }
+    
+            function tempo() {
+                let tempo = new Date().getHours();
+                console.log(tempo);
+    
+                if (tempo <= 18 && tempo >= 7){
+                    darkMode();
+                }
+            }
+    
+        </script>
     </head>
-    <body>
+    <body id="body" class="darkmode" onload="tempo()">
         
         <nav>
             <div id="Dark-light"> 
                 <p id="text-mode">Dark</p>
                 <label class="switch">
-                    <input type="checkbox">
+                    <input type="checkbox" onclick="darkMode()">
                     <span class="slider round"></span>
                 </label>
             </div>
@@ -33,7 +60,7 @@
 
         <div id="capa" class="background-ps">
             <div id="row-capa">
-            <img src="/images/yo.jpg" alt="Foto do GitHub">
+            <img src="./images/yo.jpg" alt="Foto do GitHub">
 
             <h1>Lorem Ipsum é simplesmente uma maravilha!</h1>
         </div>
@@ -41,17 +68,17 @@
 
         <div id="biografia" class="background-sp">
             <div>
-                <h2>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos.</h2>
+                <h2></h2>
             </div>
 
             <div class="grid-item content">
                 <div class="grid-item-item1 item">
-                    <img src="/images/pequena.jpg" alt="Logo da Instituição">
+                    <img src="" alt="Logo da Instituição">
                     <p>Curso Técnico em Informática Integrado ao Ensino Médio</p>
                 </div>
 
                 <figure class="grid-item-item2 item">
-                    <img src="./IMGs/pequena.jpg" alt="Logo da Instituição">
+                    <img src="" alt="Logo da Instituição">
                     <figcaption>
                         <p>Curso Técnico em Informática Integrado ao Ensino Médio</p>
                     </figcaption>

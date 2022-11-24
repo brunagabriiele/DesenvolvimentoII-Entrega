@@ -9,6 +9,23 @@
 
 }
 
+.darkmode {
+  --primary-color: #000;
+  --secondary-color: #6200ee;
+  --tertiary-color: #fff;
+  --Wfume: rgba(255, 255, 255, .4);
+  --Bfume: rgba(0, 0, 0, .4);
+}
+
+.lightmode {
+  --primary-color: #fff;
+  --secondary-color: #6200ee;
+  --tertiary-color: #000;
+  --Bfume: rgba(255, 255, 255, .4);
+  --Wfume: rgba(0, 0, 0, .4);
+  /* color: var(--primary-color); */
+}
+
 body {
     margin:0;
     
@@ -21,17 +38,53 @@ body {
 }
 
 .background-sp {
-    
+  background-image: linear-gradient(to left, var(--primary-color), var(--secondary-color));
 }
 
 h1 {
-    font-size: 40px;
+  font-size: 4rem;
+  color: var(--tertiary-color);
 }
 
 h2 {
-    font-size: 3.5rem;
-    color: var(--tertiary-color);
+    font-size: 2.5rem;
 }
+
+p {
+  display: inline-block;
+  color: var(--tertiary-color);
+  font-size: 30px;
+  margin-left: 50px;
+
+}
+
+nav {
+  display: inline-block;
+  width: 100%;
+  position: fixed;
+  background-color: rgba(255, 255, 255, .1);
+  box-shadow: #fff 0 0 15px;
+  z-index: 1;
+}
+
+ul{
+  display: inline-block;
+  float: right;
+  margin: 0;
+}
+
+li {
+  text-decoration: none;
+  display: inline-block;
+  padding: 1rem 3rem;
+  transition: color, background-color .3s;
+}
+
+li:hover {
+  color: var(--primary-color);
+  background-color: var(--primary-color);
+}
+
 
 /* estilização menu */ 
 
@@ -65,41 +118,22 @@ h2 {
 
 
 
-nav {
-    display: inline-block;
-    width: 100%;
-    position: fixed;
-    background-color: rgba(255, 255, 255, .1);
-    box-shadow: #fff 0 0 15px;
-    z-index: 1;
+/* ## Estilização do Toggle Switch ## */
+
+#dark-light {
+  display: inline-block;
 }
 
-ul{
-    display: inline-block;
-    float: right;
-    margin: 0;
+#dark-light p {
+  color: var(--tertiary-color);
+  font-weight: bold;
+  font-size: 2.4rem;
+  display: inline-block;
+  margin-left: 50px;
 }
 
-li {
-    text-decoration: none;
-    display: inline-block;
-    padding: 1rem 3rem;
-    transition: color, background-color .3s;
-}
+/* The switch - the box around the slider */
 
-li:hover {
-    color: var(--primary-color);
-    background-color: var(--primary-color);
-}
-
-
-p {
-    display: inline-block;
-    color: var(--tertiary-color);
-    font-size: 30px;
-    margin-left: 50px;
-
-}
 .switch {
     position: absolute;
     display: inline-block;
@@ -124,7 +158,7 @@ p {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: var(--tertiary-color);
+    background-color: var(--primary-color);
     -webkit-transition: .4s;
     transition: .4s;
   }
@@ -142,11 +176,11 @@ p {
   }
   
   input:checked + .slider {
-    background-color: (var(--secondary-color));
+    background-color: (var(--primary-color));
   }
   
   input:focus + .slider {
-    box-shadow: 0 0 1px #4a1283;
+    box-shadow: 0 0 1px (var(--primary-color));
   }
   
   input:checked + .slider:before {
@@ -208,7 +242,6 @@ figure {
   row-gap: 9rem;
   padding-top: 14rem;
 
-  /* background-color: aqua; */
 }
 
 .grid-item {
@@ -219,13 +252,10 @@ figure {
 .texto {
   grid-column-start: 2;
   grid-column-end: 3;
-
   padding: 1rem;
-
   height: 10rem;
   justify-content: center;
   grid-row: 1/span 2;
-
   background-color: var(--dark-fume);
   border-radius: var(--borda-semi-redonda);
   box-shadow: var(--tertiary-color) 0px 0px .6rem;
@@ -234,21 +264,14 @@ figure {
 .content {
   grid-column-start: 2;
   grid-column-end: 3;
-
   display: grid;
   grid-template-columns: 10px 1fr 1fr 10px;
-
-  /* height: 55rem; */
-
-  /* column-gap: 9rem; */
-
   margin-bottom: 12rem;
 }
 
 .grid-item-item1 {
   grid-column-start: 2;
   grid-column-end: 3;
-
   margin-right: 7rem;
 }
 
