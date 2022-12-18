@@ -10,14 +10,16 @@
         <!-- Coleta a largura do dispositivo permitindo a reponsividade da página -->
 
         <meta charset="UTF-8">
-        <title>Minha Bibliografia</title>
+        <title>Minha Bibliografia</title> 
+
         <link rel="stylesheet" href="style.css">
+        
         <script>
 
             function darkMode(){
                 let body = document.getElementById('body');
                 let texto = document.getElementById('dark-text');
-    
+
                 if (texto.innerHTML == "Dark") {
                     body.classList.remove('darkmode');
                     body.classList.add('lightmode');
@@ -28,57 +30,61 @@
                     texto.innerHTML = "Dark";
                 }  
             }
-    
+
             function tempo() {
                 let tempo = new Date().getHours();
                 console.log(tempo);
-    
+
                 if (tempo <= 18 && tempo >= 7){
                     darkMode();
                 }
             }
-    
+
+
+
         </script>
     </head>
     <body id="body" class="darkmode" onload="tempo()">
         
-        <nav>
-            <div id="Dark-light"> 
-                <p id="text-mode">Dark</p>
+        <nav id="menu">
+            <!-- Rounded switch -->
+            <div id="dark-light">
+                <p id="dark-text">Dark</p>
                 <label class="switch">
                     <input type="checkbox" onclick="darkMode()">
                     <span class="slider round"></span>
                 </label>
             </div>
             <ul>
-                <a href="#"> <li> <h2> Home </h2> </li> </a>
-                <a href="#"> <li> <h2> Biografia </h2> </li> </a>
-                <a href="#"> <li> <h2> Portfólio </h2> </li> </a>
-                <a href="#"> <li> <h2> Contato </h2> </li> </a>
+                <a href="#capa"><li><h2>Home</h2></li></a>
+                <a href="#biografia"><li><h2>Biografia</h2></li></a>
+                <a href="#projetos"><li><h2>Portfólio</h2></li></a>
+                <a href="#contato"><li><h2>Contato</h2></li></a>
             </ul>
         </nav>
 
         <div id="capa" class="background-ps">
-            <div id="row-capa">
-            <img src="./images/yo.jpg" alt="Foto do GitHub">
+            <div class="row">
+                <img src="./images/yo.jpg" alt="Foto do GitHub">
 
-            <h1>Lorem Ipsum é simplesmente uma maravilha!</h1>
+                <h1>Lorem Ipsum é simplesmente uma maravilha!</h1>
+            </div>
         </div>
-        </div>
+
 
         <div id="biografia" class="background-sp">
-            <div>
-                <h2></h2>
+            <div class="grid-item text"><!-- "texto" faz a estilização -->
+                <h2>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos.</h2>
             </div>
 
             <div class="grid-item content">
-                <div class="grid-item-item1 item">
-                    <img src="" alt="Logo da Instituição">
+                <div class="grid-item-item1 item"><!-- "item" faz a estilização -->
+                    <img src="./images/ifc.png" alt="Logo da Instituição">
                     <p>Curso Técnico em Informática Integrado ao Ensino Médio</p>
                 </div>
 
-                <figure class="grid-item-item2 item">
-                    <img src="" alt="Logo da Instituição">
+                <figure class="grid-item-item2 item"><!-- "item" faz a estilização -->
+                    <img src="./images/ufsc.svg" alt="Logo da Instituição">
                     <figcaption>
                         <p>Curso Técnico em Informática Integrado ao Ensino Médio</p>
                     </figcaption>
@@ -86,15 +92,101 @@
             </div>
         </div>
         
-        <div id="portfólio" class="background-ps">
-            <div>Tecnologias
+        <div id="portfolio" class="background-ps">
+            <div id="tecnologias">
                 <select name="" id="tec-ops">
-
+                    <option value="">Tecnologia</option>
+                    <option value="">Sustentabilidade</option>
+                    <option value="">Educação</option>
+                    <option value="">Empreendedorismo</option>
                 </select>
 
+                <div class="row">
+                    <div class="col">
+                        <div class="topo">
+                            <input type="checkbox" name="HTML">
+                            <label for="HTML">HTML</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="CSS">
+                            <label for="CSS">CSS</label>
+                        </div>
+                    </div>
+
+                    <div class="col center">
+                        <div class="topo">
+                            <input type="checkbox" name="JS">
+                            <label for="JS">JavaScript</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="Vue">
+                            <label for="Vue">Vue JS</label>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="topo">
+                            <input type="checkbox" name="Python">
+                            <label for="Python">Python</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="Django">
+                            <label for="Django">Django</label>
+                        </div>
+                    </div>
+                </div>
+                
+                
             </div>
 
-            <div>Projetos</div>
+            <div id="projetos">
+                <h2>Projetos</h2>
+                
+                <div id="slider">
+
+                    <figure class="slide">
+                        <img src="./images/pequena.jpg" alt="">
+                        <figcaption>
+                            <h2>Portfólio</h2>
+                            <ul>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                            </ul>
+                            <p>Este é trabalho para revisar os conteúdos iniciais de Desenvolvimento Web I.</p>
+                        </figcaption>
+                    </figure>
+                    
+                    <figure class="slide">
+                        <img src="./images/pequena.jpg" alt="">
+                        <figcaption>
+                            <h2>Portfólio</h2>
+                            <ul>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                            </ul>
+                            <p>Este é trabalho para revisar os conteúdos iniciais de Desenvolvimento Web I.</p>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="slide">
+                        <img src="./images/pequena.jpg" alt="">
+                        <figcaption>
+                            <h2>Portfólio</h2>
+                            <ul>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                            </ul>
+                            <p>Este é trabalho para revisar os conteúdos iniciais de Desenvolvimento Web I.</p>
+                        </figcaption>
+                    </figure>
+
+                </div>
+                
+
+            </div>
 
         </div>
 
@@ -119,9 +211,5 @@
             </form>
 
         </div>
-
-
-
     </body>
-
 </html>

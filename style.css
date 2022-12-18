@@ -1,12 +1,9 @@
+/* Estilização do Tema */
+
 :root {
-    font-size:62.5%;
-    box-sizing: border-box;
+  box-sizing: border-box;
 
-
-    --primary-color: #000;
-    --secondary-color: #6200ee;
-    --tertiary-color: #fff;
-
+  font-size: 62.5%; 
 }
 
 .darkmode {
@@ -27,18 +24,7 @@
 }
 
 body {
-    margin:0;
-    
-
-}
-
-.background-ps{
-    background-image: linear-gradient(to right, var(--primary-color), var(--secondary-color));
-
-}
-
-.background-sp {
-  background-image: linear-gradient(to left, var(--primary-color), var(--secondary-color));
+  margin: 0;
 }
 
 h1 {
@@ -47,46 +33,23 @@ h1 {
 }
 
 h2 {
-    font-size: 2.5rem;
+  font-size: 2.5rem;
 }
 
 p {
-  display: inline-block;
-  color: var(--tertiary-color);
-  font-size: 30px;
-  margin-left: 50px;
-
+  font-size: 1.8rem;
 }
 
-nav {
-  display: inline-block;
-  width: 100%;
-  position: fixed;
-  background-color: rgba(255, 255, 255, .1);
-  box-shadow: #fff 0 0 15px;
-  z-index: 1;
+.background-ps {
+  background-image: linear-gradient(to right, var(--primary-color), var(--secondary-color));
 }
 
-ul{
-  display: inline-block;
-  float: right;
-  margin: 0;
-}
-
-li {
-  text-decoration: none;
-  display: inline-block;
-  padding: 1rem 3rem;
-  transition: color, background-color .3s;
-}
-
-li:hover {
-  color: var(--primary-color);
-  background-color: var(--primary-color);
+.background-sp {
+  background-image: linear-gradient(to left, var(--primary-color), var(--secondary-color));
 }
 
 
-/* estilização menu */ 
+/* # Estilização do Menu # */
 
 #menu {
   /* background-image: linear-gradient(to right top, var(--primary-color), var(--secondary-color)); */
@@ -99,7 +62,9 @@ li:hover {
 
 #menu ul {
   display: inline-block;
-  margin: 0 0 0 1000px;
+  margin-right: 10rem;
+  float: right;
+  
 }
 
 #menu ul li {
@@ -126,152 +91,155 @@ li:hover {
 
 #dark-light p {
   color: var(--tertiary-color);
-  font-weight: bold;
   font-size: 2.4rem;
   display: inline-block;
   margin-left: 50px;
 }
 
+
 /* The switch - the box around the slider */
-
 .switch {
-    position: absolute;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
-    margin-left: 10px;
-    margin-top: 30px;
-  }
-  
-  /* Hide default HTML checkbox */
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  left: 10px;
+  top: -15px;
+}
+
+/* Hide default HTML checkbox */
   .switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-  
-  /* The slider */
-  .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: var(--primary-color);
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-  
-  .slider:before {
-    position: absolute;
-    content:"";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: var(--secondary-color);
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-  
-  input:checked + .slider {
-    background-color: (var(--primary-color));
-  }
-  
-  input:focus + .slider {
-    box-shadow: 0 0 1px (var(--primary-color));
-  }
-  
-  input:checked + .slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
-  }
-  
-  /* Rounded sliders */
-  .slider.round {
-    border-radius: 34px;
-  }
-  
-  .slider.round:before {
-    border-radius: 50%;
-  }
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
 
-/* capa*/ 
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--tertiary-color);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: var(--secondary-color);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: var(--tertiary-color);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--tertiary-color);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
+
+/* # Estilização da Capa de Apresentação # */
+
 #capa {
-    height: 1080px;
+  height: 1020px;
+  /* padding-top: 280px;
+  padding-left: 316px; */
 }
 
-#capa #row-capa {
-    position:absolute;
-    margin: 280px 316px ;
-   
+#capa .row {
+  margin: 280px 316px;
+  position: absolute;
+  width: 1000px;
+  /* background-color: aqua; */
 }
 
-#row-capa img {
-    display: inline-block;
-    height: 400px;
-    width: 400px;
-    border-radius: 50%;
-    border: 2px solid var(--tertiary-color);
-    box-shadow: var(--tertiary-color) 0 0 15px;
+#capa img {
+  height: 400px; 
+  width: 400px;
+  border-radius: 50%;
+  border: 2px solid var(--tertiary-color);
+  box-shadow: var(--tertiary-color) 0px 0px 15px;
+  margin-left: -250px;
 }
 
-#row-capa h1 {
-    display: inline-block;
-
-    position: relative;
-    top: -180px;
-    left: 50px;
+#capa h1 {
+  display: inline-block;
+  position:relative;
+  top: -180px;
+  left: 165px;
 }
 
-/*biografia*/ 
-
-figure {
-  margin: auto 0;
-}
+/* # Estilização da Biografia # */
 
 #biografia {
   display: grid;
-
-  grid-template-columns: 200px 1fr 200px;
-  grid-template-rows: 100px 1fr;
+  grid-template-rows: 10rem 1fr;
+  grid-template-columns: 20rem 1fr 20rem;
   grid-area: content;
-
-  row-gap: 9rem;
+  
+  row-gap: 15rem;
   padding-top: 14rem;
 
+  /* background-color: aqua; */
 }
 
 .grid-item {
-  margin: 10px;
+  display: grid;
   text-align: center;
+  margin: 1rem;
+
+  /* background-color: coral; */
 }
 
-.texto {
+.text {
   grid-column-start: 2;
   grid-column-end: 3;
-  padding: 1rem;
+
+  /* grid-row: 1/span 2; */
   height: 10rem;
+  align-items: center;
   justify-content: center;
-  grid-row: 1/span 2;
-  background-color: var(--dark-fume);
-  border-radius: var(--borda-semi-redonda);
-  box-shadow: var(--tertiary-color) 0px 0px .6rem;
 }
 
 .content {
   grid-column-start: 2;
   grid-column-end: 3;
-  display: grid;
-  grid-template-columns: 10px 1fr 1fr 10px;
-  margin-bottom: 12rem;
+
+  grid-template-columns: 1rem 1fr 1fr 1rem;
+
+  margin-bottom: 15rem;
 }
 
 .grid-item-item1 {
   grid-column-start: 2;
   grid-column-end: 3;
+
   margin-right: 7rem;
 }
 
@@ -279,20 +247,182 @@ figure {
   margin-left: 7rem;
 }
 
-.item {
-  background-color: var(--dark-fume);
-  border-radius: var(--borda-semi-redonda);
-  box-shadow: var(--tertiary-color) 0px 0px .8rem;
-  transition: background-color .7s;
+.text {
+  color: var(--tertiary-color);
+  box-shadow: var(--tertiary-color) 0 0 5px;
 }
 
-.item > img {
-  border-radius: 1.2rem 0 0 0;
-  width: 100%;
+
+.item {
+  padding: 1rem;
+  background-color: var(--Bfume);
+  border-radius: 1.2rem 0 1.2rem 0;
+  box-shadow: var(--tertiary-color) 0 0 5px;
+  color: var(--tertiary-color);
+  transition: color, background-color .4s;
 }
 
 .item:hover {
+  box-shadow: var(--primary-color);
   background-color: var(--tertiary-color);
-  box-shadow: var(--tertiary-color) 0px 0px 1.2rem;
   color: var(--primary-color);
 }
+
+figure {
+  margin: 0;
+}
+
+.content img {
+  height: 20rem;
+  max-width: 25rem;
+  min-width: 15rem;
+  margin-bottom: 1rem;
+}
+
+
+/* # Portfólio # */
+
+#portfolio {
+  display: flex;
+  flex-direction: column;
+  justify-content:space-evenly; /* Alinhamento na horizontal topo e baixo */
+  align-items: center;  /* Alinhamento na vertical esquerda e direita*/
+  height: 100rem;
+  
+}
+
+#tecnologias {
+  background-color: var(--Bfume);
+  width: 40%;
+  height: 20rem;
+  border-radius: 1.2rem 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#tecnologias select {
+  width: 90%;
+  font-size: 2.5rem;
+
+  color: var(--primary-color);
+  background-color: var(--tertiary-color);
+  text-align: center;
+  border-radius: 1.2rem 0;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+#tecnologias .row {
+  display: flex;
+  flex-direction: row;
+}
+
+#tecnologias .col {
+  display: flex;
+  flex-direction: column;
+}
+
+#tecnologias input {
+  width: 2rem;
+  height: 2rem;
+}
+
+#tecnologias label {
+  font-size: 2.2rem;
+  color: var(--tertiary-color);
+}
+
+#tecnologias .center {
+  margin: auto 18rem;
+}
+
+#tecnologias .topo {
+  margin-bottom: 1rem;
+}
+
+/* ## Projetos ## */
+
+#projetos {
+  width: 90%;
+  height: 50rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: var(--Bfume);
+}
+
+#projetos h2 {
+  margin: 3rem auto 4rem;
+}
+
+#projetos #slider {
+  display: flex;
+  align-items: center;
+}
+
+#projetos .slide {
+  margin: auto 1rem;
+}
+
+#projetos img {
+  width: 100%;
+  border-radius: 1.2rem 0;
+}
+
+#projetos figcaption {
+  position: relative;    
+
+  top: -34rem;
+
+  height: 31.8rem;
+  width: 96.5%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 1.2rem 0;
+  text-align: center;
+  color: var(--primary-color);
+  background-color: var(--Wfume);
+  padding: 1rem;
+  opacity: 0;
+  transition: opacity .4s;
+}
+
+#projetos figcaption:hover{
+  opacity: 1;
+}
+
+#projetos figcaption h2 {
+  font-size: 3.5rem;
+}
+
+#projetos figcaption ul {
+  display: flex;
+  list-style: none;
+}
+
+#projetos figcaption li {
+  font-size: 1.8rem;
+  margin-right: 1rem;
+}
+
+#projetos figcaption p {
+  font-size: 1.8rem;
+  line-height: 2rem;
+}
+
+
+
+
+
+
+
