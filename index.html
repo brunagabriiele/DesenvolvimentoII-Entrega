@@ -40,10 +40,27 @@
                 }
             }
 
+            var slideIndex = 1;
+            showDivs(slideIndex);
 
+            function plusDivs(n) {
+            showDivs(slideIndex += n);
+            }
+
+            function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("slide");
+            if (n > x.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = x.length}
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";  
+            }
+            x[slideIndex-1].style.display = "block";  
+            }
 
         </script>
     </head>
+    
     <body id="body" class="darkmode" onload="tempo()">
         
         <nav id="menu">
@@ -141,11 +158,12 @@
 
             <div id="projetos">
                 <h2>Projetos</h2>
-                
+                <button onclick="plusDivs(-1)">Anterior</button>
+                <button onclick="plusDivs(1)">Próximo</button>
                 <div id="slider">
-
-                    <figure class="slide">
-                        <img src="./images/pequena.jpg" alt="">
+           
+                    <figure class="slide" style="display: none;">
+                        <img src="./images/pequena.png" alt="">
                         <figcaption>
                             <h2>Portfólio</h2>
                             <ul>
@@ -153,12 +171,12 @@
                                 <li>CSS</li>
                                 <li>JavaScript</li>
                             </ul>
-                            <p>Este é trabalho para revisar os conteúdos iniciais de Desenvolvimento Web I.</p>
+                            <p>Exemplo I </p>
                         </figcaption>
                     </figure>
                     
-                    <figure class="slide">
-                        <img src="./images/pequena.jpg" alt="">
+                    <figure class="slide" style="display: none;">
+                        <img src="./images/pequena.png" alt="">
                         <figcaption>
                             <h2>Portfólio</h2>
                             <ul>
@@ -166,12 +184,12 @@
                                 <li>CSS</li>
                                 <li>JavaScript</li>
                             </ul>
-                            <p>Este é trabalho para revisar os conteúdos iniciais de Desenvolvimento Web I.</p>
+                            <p>Exemplo II</p>
                         </figcaption>
                     </figure>
 
-                    <figure class="slide">
-                        <img src="./images/pequena.jpg" alt="">
+                    <figure class="slide" style="display: none;">
+                        <img src="./images/pequena.png" alt="">
                         <figcaption>
                             <h2>Portfólio</h2>
                             <ul>
@@ -179,7 +197,7 @@
                                 <li>CSS</li>
                                 <li>JavaScript</li>
                             </ul>
-                            <p>Este é trabalho para revisar os conteúdos iniciais de Desenvolvimento Web I.</p>
+                            <p>Exemplo III</p>
                         </figcaption>
                     </figure>
 

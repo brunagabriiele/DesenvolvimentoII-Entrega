@@ -167,9 +167,7 @@ input:checked + .slider:before {
 /* # Estilização da Capa de Apresentação # */
 
 #capa {
-  height: 1020px;
-  /* padding-top: 280px;
-  padding-left: 316px; */
+  height: 800px;
 }
 
 #capa .row {
@@ -349,11 +347,10 @@ figure {
 #projetos {
   width: 90%;
   height: 50rem;
-
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-
   background-color: var(--Bfume);
 }
 
@@ -371,23 +368,19 @@ figure {
 }
 
 #projetos img {
-  width: 100%;
-  border-radius: 1.2rem 0;
+    width: 60.5rem;
+    border-radius: 2.0rem 0;
 }
 
 #projetos figcaption {
   position: relative;    
-
   top: -34rem;
-
   height: 31.8rem;
   width: 96.5%;
-
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
   border-radius: 1.2rem 0;
   text-align: center;
   color: var(--primary-color);
@@ -419,8 +412,6 @@ figure {
   font-size: 1.8rem;
   line-height: 2rem;
 }
-
-
 
 
 
